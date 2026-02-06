@@ -10,7 +10,26 @@ const usuariosRoutes = require('./routes/usuarios');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+// Configuração de CORS para permitir o frontend
+const allowedOrigins = [
+  'http://localhost:3000',  // Desenvolvimento local
+  'https://produtividade-pgm.vercel.app',  // Frontend em produção
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // Permitir requisições sem origin (como mobile apps ou curl)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'CORS policy: Esta origem não está autorizada a acessar este recurso.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -27,7 +46,7 @@ initPromise
   .then(() => {
     app.listen(PORT, () => {
       console.log(`\n🚀 Servidor rodando na porta ${PORT}`);
-      console.log(`📡 API disponível em http://localhost:${PORT}`);
+      console.log(`📡 API disponível em https://produtividade-pgm.vercel.app/`);
     });
   })
   .catch((err) => {
