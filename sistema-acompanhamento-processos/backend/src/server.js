@@ -16,7 +16,7 @@ const allowedOrigins = [
   'https://produtividade-pgm.vercel.app',  // Frontend em produção
 ];
 
-app.use(cors({
+const corsOptions = {
   origin: function (origin, callback) {
     // Permitir requisições sem origin (como mobile apps ou curl)
     if (!origin) return callback(null, true);
@@ -27,8 +27,16 @@ app.use(cors({
     }
     return callback(null, true);
   },
-  credentials: true
-}));
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+
+// Tratar requisições OPTIONS (preflight) explicitamente
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
