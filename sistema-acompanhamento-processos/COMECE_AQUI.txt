@@ -1,0 +1,241 @@
+================================================================================
+   SISTEMA DE ACOMPANHAMENTO DE PROCESSOS - COMECE AQUI!
+================================================================================
+
+Ola! Este arquivo vai te guiar de forma SIMPLES e DIRETA.
+
+================================================================================
+  OPCAO 1: FORMA AUTOMATICA (MAIS FACIL!)
+================================================================================
+
+1. Clique DUAS VEZES no arquivo: INICIAR.bat
+
+2. Aguarde as duas janelas abrirem
+
+3. O navegador abrira automaticamente
+
+4. Pronto! Use o sistema!
+
+
+================================================================================
+  OPCAO 2: FORMA MANUAL (Primeira Vez)
+================================================================================
+
+ETAPA 1: Verificar se tem Node.js instalado
+-------------------------------------------
+1. Abra o Prompt de Comando (Win + R, digite "cmd" e Enter)
+
+2. Digite: node --version
+
+3. Se aparecer um numero (ex: v18.17.0) = TEM! Va para ETAPA 2
+   Se der erro = NAO TEM! Va para ETAPA 1.1
+
+
+ETAPA 1.1: Instalar Node.js (so se nao tiver)
+---------------------------------------------
+1. Acesse: https://nodejs.org/
+
+2. Baixe a versao LTS (botao verde grande)
+
+3. Execute o instalador (clique Next ate o fim)
+
+4. REINICIE O COMPUTADOR
+
+5. Volte para ETAPA 2
+
+
+ETAPA 2: Instalar dependencias do BACKEND
+------------------------------------------
+1. Abra o Prompt de Comando
+
+2. Digite (ou copie e cole):
+   cd "C:\Users\marcos.santos\OneDrive\Documentos\Marcos\Produtividade PGM\sistema-acompanhamento-processos\backend"
+
+3. Aperte Enter
+
+4. Digite: npm install
+
+5. Aperte Enter
+
+6. AGUARDE 1-3 minutos (vai aparecer muitas mensagens)
+
+7. Quando parar e o cursor voltar a piscar = PRONTO!
+
+
+ETAPA 3: Instalar dependencias do FRONTEND
+-------------------------------------------
+1. No mesmo Prompt de Comando, digite:
+   cd ..\frontend
+
+2. Aperte Enter
+
+3. Digite: npm install
+
+4. Aperte Enter
+
+5. AGUARDE 1-3 minutos
+
+6. Quando parar = PRONTO!
+
+
+ETAPA 4: INICIAR O SISTEMA
+---------------------------
+
+IMPORTANTE: Voce vai precisar de DUAS janelas de Prompt abertas!
+
+JANELA 1 (Backend):
+-------------------
+1. Abra o Prompt de Comando
+
+2. Digite:
+   cd "C:\Users\marcos.santos\OneDrive\Documentos\Marcos\Produtividade PGM\sistema-acompanhamento-processos\backend"
+
+3. Aperte Enter
+
+4. Digite: npm start
+
+5. Aperte Enter
+
+6. Aguarde aparecer: "Servidor rodando na porta 3001"
+
+7. NAO FECHE ESTA JANELA!
+
+
+JANELA 2 (Frontend):
+--------------------
+1. Abra OUTRO Prompt de Comando (uma segunda janela)
+
+2. Digite:
+   cd "C:\Users\marcos.santos\OneDrive\Documentos\Marcos\Produtividade PGM\sistema-acompanhamento-processos\frontend"
+
+3. Aperte Enter
+
+4. Digite: npm start
+
+5. Aperte Enter
+
+6. Aguarde o navegador abrir automaticamente
+
+7. NAO FECHE ESTA JANELA TAMBEM!
+
+
+ETAPA 5: USAR O SISTEMA
+------------------------
+1. O navegador vai abrir em: http://localhost:3000
+
+2. Clique em "Cadastre-se"
+
+3. Preencha:
+   - Nome: Seu nome
+   - Email: seu@email.com
+   - Senha: minimo 6 caracteres
+
+4. Clique em "Cadastrar"
+
+5. Clique em "Faca login"
+
+6. Digite seu email e senha
+
+7. Clique em "Entrar"
+
+8. PRONTO! Voce esta no sistema!
+
+
+ETAPA 6: CRIAR SEU PRIMEIRO PROCESSO
+-------------------------------------
+1. Clique em "+ Novo Processo"
+
+2. Preencha:
+   - Numero do processo: 0001234-56.2024.8.00.0000
+   - Titulo: Acao de Cobranca
+   - Cliente: Joao Silva
+   - Status: Em andamento
+
+3. Clique em "Salvar"
+
+4. Clique no processo para ver detalhes
+
+5. Adicione movimentacoes no campo de texto
+
+
+ETAPA 7: PARAR O SISTEMA
+-------------------------
+Quando quiser parar:
+
+1. Va na JANELA 1 (backend)
+2. Pressione: Ctrl + C
+3. Digite: S
+4. Aperte Enter
+
+5. Va na JANELA 2 (frontend)
+6. Pressione: Ctrl + C
+7. Digite: S
+8. Aperte Enter
+
+9. Agora pode fechar tudo!
+
+
+================================================================================
+  ARQUIVOS DE AJUDA
+================================================================================
+
+Precisa de mais detalhes? Abra estes arquivos:
+
+INICIO_RAPIDO.md       = Guia detalhado passo a passo
+GUIA_VISUAL.md         = Mostra exatamente o que voce vera na tela
+SOLUCAO_PROBLEMAS.md   = Solucao para erros comuns
+README.md              = Documentacao completa do projeto
+
+
+================================================================================
+  PROBLEMAS COMUNS
+================================================================================
+
+Erro: "node nao e reconhecido"
+-> Instale o Node.js (Etapa 1.1)
+
+Erro: "porta 3001 ja esta em uso"
+-> Feche outros programas ou altere a porta no arquivo backend\.env
+
+Pagina em branco
+-> Verifique se as duas janelas (backend e frontend) estao rodando
+
+Erro ao fazer login
+-> Verifique se o backend esta rodando
+-> Tente cadastrar novamente
+
+
+================================================================================
+  PROXIMAS VEZES
+================================================================================
+
+Depois que tudo estiver instalado, voce so precisa:
+
+1. Abrir duas janelas de Prompt
+
+2. Na primeira: ir ate \backend e digitar "npm start"
+
+3. Na segunda: ir ate \frontend e digitar "npm start"
+
+4. Aguardar abrir e usar!
+
+OU simplesmente clicar duas vezes em: INICIAR.bat
+
+
+================================================================================
+  DUVIDAS?
+================================================================================
+
+Leia os outros arquivos de ajuda:
+- INICIO_RAPIDO.md (mais detalhado)
+- GUIA_VISUAL.md (mostra telas)
+- SOLUCAO_PROBLEMAS.md (erros e solucoes)
+
+
+================================================================================
+  BOA SORTE!
+================================================================================
+
+O sistema e facil de usar. Qualquer duvida, consulte os guias!
+
+================================================================================
