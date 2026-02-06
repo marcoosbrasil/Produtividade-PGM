@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "buildCommand": "cd sistema-acompanhamento-processos/frontend && npm install && npm run build",
+  "outputDirectory": "sistema-acompanhamento-processos/frontend/build",
+  "installCommand": "cd sistema-acompanhamento-processos/frontend && npm install",
+  "framework": null,
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
