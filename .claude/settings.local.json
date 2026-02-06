@@ -7,7 +7,9 @@
       "Bash(node verificar-banco.js:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(npm install:*)"
     ]
   }
 }

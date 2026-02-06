@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: pgm-backend
+    runtime: node
+    rootDir: sistema-acompanhamento-processos/backend
+    buildCommand: npm install
+    startCommand: node src/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: JWT_SECRET
+        generateValue: true
+    disk:
+      name: pgm-backend-disk
+      mountPath: /opt/render/project/src/database
+      sizeGB: 1

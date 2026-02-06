@@ -1,10 +1,19 @@
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
+const fs = require('fs');
 
-const dbPath = path.join(__dirname, '../../database/processos.db');
+// Determinar o caminho do banco de dados
+const dbDir = path.join(__dirname, '../../database');
+const dbPath = path.join(dbDir, 'processos.db');
 
 let db;
 let isInitialized = false;
+
+// Criar diretório do banco se não existir
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+  console.log('✓ Diretório de banco de dados criado:', dbDir);
+}
 
 // Promise para inicialização do banco
 const dbInitPromise = new Promise((resolve, reject) => {
