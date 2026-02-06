@@ -4,7 +4,10 @@
       "Bash(sqlite3:*)",
       "Bash(dir:*)",
       "Bash(del:*)",
-      "Bash(node verificar-banco.js:*)"
+      "Bash(node verificar-banco.js:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)"
     ]
   }
 }
