@@ -52,7 +52,7 @@ function Login() {
     <div className="login-container">
       <div className="login-box">
         <h1>{isLogin ? 'Login' : 'Cadastro'}</h1>
-        <p className="subtitle">Sistema de Acompanhamento de Processos</p>
+        <p className="subtitle">Produtividade da Coordenadoria Administrativo-Financeira/PGM</p>
 
         {erro && <div className="erro-mensagem">{erro}</div>}
 
